@@ -3,9 +3,7 @@
 source ../code/gpioFree.sh
 
 #current time
-d=`date`
-timeRaw=`echo "$d" | cut -d' ' -f 4`
-time="${timeRaw:0:5}"
+time=`date +"%T"`
 
 #this so can split e.g. 19:38 in to 1 9 3 8 for processing - removes colon
 digits=(`echo $time | grep -o .`)
